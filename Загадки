@@ -1,12 +1,12 @@
 from random import randint
 from colorama import init, Fore, Back, Style
-def zag1():
-    n = 0
+def zag():
     h = 0
+    n = 0
     c = randint(1, 5)
     print('Загадка 1.\nВ какой из пяти коробок лежит ручка. У вас 2 попытки.')
     while n < 2:
-        b = input('Введите ответ:')
+        b = int(input('Введите ответ:'))
         if b == c:
             print('Правильный ответ!')
             h += 1
@@ -14,9 +14,6 @@ def zag1():
         else:
             print('Ответ неверный')
             n += 1
-    return h
-h = zag1()
-def zag2():
     n = 0
     print('Вы потратили все свои попытки. Давайте передём к второй загатке.')
     print('Загадка 2.\nУ вас 2 попытки.\nСтоит дуб,\nВ нем двенадцать гнезд,\nВ каждом гнездеПо четыре яйца,\nВ каждом яйце\nПо семи цыпленков.\nЧто это?')
@@ -29,9 +26,6 @@ def zag2():
         else:
             print('Ответ неверный')
             n += 1
-    return h
-h = zag2()
-def zag3():
     n = 0
     print('Загадка 3.\nРечка спятила с ума —\nПо домам пошла сама.')
     while n < 2:
@@ -39,12 +33,13 @@ def zag3():
         if b == 'Водопровод' or 'водопровод':
             print('Правильный ответ!')
             h += 1
+            print(h)
             break
         else:
             print('Ответ неверный.')
             n += 1
-    return h
-h = zag3()
+        return h
+h = zag()
 if h == 0:
     print('Вы не угадали ни одной загадки.')
 elif h == 1:
@@ -65,6 +60,4 @@ else:
         print("          **    **  ********  ********  ********       **      ")
     console_picture()
     input()
-zag1()
-zag2()
-zag3()
+zag()
