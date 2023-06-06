@@ -55,13 +55,13 @@ gah()
 
 def gah():
     a = input("Введите число")
-    b = len(a) 
-    try:
-        while b < 0:
-            f = a[b] 
-            b -= 1
-            print(f) 
+    print(([int(i) for i in str(a)])) 
 
-    except ValueError:
-        print("Допускаются только цифры")
+
+           
+
+          
+
+
+
 gah()
