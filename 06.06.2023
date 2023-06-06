@@ -54,7 +54,7 @@ gah()
 
 
 def gah():
-    a = int(input("Введите число"))
+    a = input("Введите число")
     b = len(a) 
     try:
         while b < 0:
