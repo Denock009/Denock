@@ -53,3 +53,15 @@ gah()
 -----------------------------------------------------
 
 
+def gah():
+    a = int(input("Введите число"))
+    b = len(a) 
+    try:
+        while b < 0:
+            f = a[b] 
+            b -= 1
+            print(f) 
+
+    except ValueError:
+        print("Допускаются только цифры")
+gah()
