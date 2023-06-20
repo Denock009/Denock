@@ -1,0 +1,10 @@
+from preloaded import PRIMES 
+def prime_grasshopper(arr): 
+    landing = [] 
+    for x in arr: 
+        best = x 
+        for p in PRIMES: 
+            if p > len(landing): break 
+            best = max(best, x + landing[-p]) 
+        landing.append(best) 
+    return max(0, *landing)
