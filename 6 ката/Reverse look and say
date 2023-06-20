@@ -1,0 +1,6 @@
+def starting_number(n):
+    return n if len(s := str(n)) % 2 or \
+    s[1] == '0' and s != '10' or '0' in s[::2] or \
+    any(a == b for a, b in zip(s[1::2], s[3::2])) or \
+    s == (t := ''.join(int(x)*c for x, c in zip(* [iter(s)] * 2))) \
+    else starting_number(int(t))
