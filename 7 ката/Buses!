@@ -1,0 +1,9 @@
+import math
+def buses(kids, adults, places):
+    Sum = kids + adults
+    if places > 0 and adults != 0:
+        t =math.ceil(Sum/places)
+        m = math.floor(adults/2)
+        if t < m or places > 2 and m >= t and adults >= 2 or kids == 0:
+                return t
+    return 0
