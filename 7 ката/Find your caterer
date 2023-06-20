@@ -1,0 +1,12 @@
+def find_caterer(budget, people):
+    if people != 0:
+        pp = budget / people
+        if pp < 15:
+            return -1
+        elif pp < 20:
+            return 1
+        elif pp < 24 or (pp < 30 and people <= 60):
+            return 2
+        else:
+            return 3
+    return -1
