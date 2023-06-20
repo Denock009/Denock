@@ -1,0 +1,3 @@
+def create_two_sets_of_equal_sum(n):
+    if n % 4 in {1, 2}: return []
+    return [[*range(1,n//4+1), *range(n*3//4+1,n+1)], [*range(n//4+1,n*3//4+1)]]
