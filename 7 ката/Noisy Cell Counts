@@ -1,0 +1,4 @@
+from itertools import accumulate
+
+def cleaned_counts(data):
+    return [*accumulate(data, max)]
