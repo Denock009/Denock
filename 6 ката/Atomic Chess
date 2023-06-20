@@ -1,0 +1,10 @@
+def make_atomic_move(position, move):
+    j, i, x, l, k = move
+    i, j, k, l = 8-int(i), ord(j)-97, 8-int(k), ord(l)-97
+    position[i][j], position[k][l] = '.', position[i][j]
+    if x == 'x':
+        for u in range(max(0, k-1), min(8, k+2)):
+            for v in range(max(0, l-1), min(8, l+2)):
+                if k==u and l==v or position[u][v] not in "pP":
+                    position[u][v] = '.'
+    return position
